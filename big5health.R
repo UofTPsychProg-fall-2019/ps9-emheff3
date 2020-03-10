@@ -80,7 +80,7 @@ n <- length(unique(ipip.comp$RID))
 exer.avg <- ipip.comp %>% 
   group_by(exer, trait) %>%
   mutate(avg = mean(trait_avg)) %>%
-  mutate(sem = sd(trait_avg)/sqrt(n)) # ERROR BARS ARE TOO SMALL
+  mutate(sem = sd(trait_avg)/sqrt(n)) # Error bars look a bit small, but the scale of my graph is slightly different
   
 # If you properly created the exer.avg tibble above, the following code will 
 # create a plot and save it as figures/exer.pdf. Check your figure with 
